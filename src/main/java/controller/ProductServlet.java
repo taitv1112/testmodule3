@@ -50,7 +50,7 @@ public class ProductServlet extends HttpServlet {
                 int id1 = Integer.parseInt(req.getParameter("id"));
                 try {
                     req.setAttribute("product", productService.getProductById(id1));
-                    requestDispatcher = req.getRequestDispatcher("views/editCategory.jsp");
+                    requestDispatcher = req.getRequestDispatcher("views/editProduct.jsp");
                     requestDispatcher.forward(req, resp);
                 } catch (SQLException e) {
                     e.printStackTrace();
